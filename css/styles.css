@@ -149,11 +149,6 @@ button {
         0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-/*.header-nav {
-    display: flex;
-    align-items: center;
-}*/
-
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -174,7 +169,6 @@ button {
 @media only screen and (min-width: 1158px) {
     .header-logo {
         margin-left: 140px;
-        /*margin-right: 76px;*/
     }
 }
 
@@ -251,10 +245,6 @@ button {
     margin-left: auto;
 }
 
-.contacts-list {
-    /*display: flex;*/
-}
-
 @media only screen and (min-width: 1158px) {
     .contacts-list {
         display: flex;
@@ -262,11 +252,6 @@ button {
         margin-right: 76px;
     }
 }
-
-/*.contacts-list {
-    display: flex;
-    gap: 40px;
-}*/
 
 .header-contacts {
     color: inherit;
@@ -484,7 +469,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     row-gap: 72px;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -632,23 +616,29 @@ button {
 
 .footer-inner {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 72px;
 
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (min-width: 768px) {
     .footer-inner {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        gap: 72px;
+        gap: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: left;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @media only screen and (min-width: 1158px) {
     .footer-inner {
         align-items: baseline;
-        flex-direction: row;
         gap: 120px;
     }
 }
@@ -694,22 +684,27 @@ button {
 
 }
 
-@media only screen and (min-width: 1158px) {
-    .footer-form {
-        flex-direction: row;
-    }
-}
 
 @media only screen and (max-width: 767px) {
     .footer-subscribe {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .footer-form {
+        flex-direction: row;
+        
+    }
+}
+
+
 @media only screen and (min-width: 1158px) {
     .footer-subscribe {
+        justify-content: left;
         margin-left: -40px;
     }
 }
@@ -725,13 +720,23 @@ button {
 
     padding: 16px 8px;
     color: var(--white);
-    margin-right: 24px;
+
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
     .subscribe-input {
         width: 100%;
         margin-bottom: 16px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .subscribe-input {
+        margin-right: 16px;
+    }
+}
+@media only screen and (min-width: 1158px) {
+    .subscribe-input {
+        margin-right: 24px;
     }
 }
 
