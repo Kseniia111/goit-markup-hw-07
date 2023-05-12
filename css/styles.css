@@ -79,8 +79,8 @@ button {
     padding-left: 16px;
     padding-right: 16px;
 
-    outline: 2px solid red;
-    outline-offset: -2px;
+   /*outline: 2px solid red;
+    outline-offset: -2px;*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -643,7 +643,7 @@ button {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 72px;
+    row-gap: 72px;
 
 }
 @media only screen and (min-width: 768px) and (max-width: 1158px) {
@@ -656,7 +656,8 @@ button {
 
 @media only screen and (min-width: 768px) {
     .footer-inner {
-        gap: 16px;
+        align-items: baseline;
+        column-gap: 16px;
         flex-direction: row;
         flex-wrap: wrap;
         text-align: left;
@@ -666,7 +667,6 @@ button {
 
 @media only screen and (min-width: 1159px) {
     .footer-inner {
-        align-items: baseline;
         gap: 120px;
     }
 }
@@ -721,6 +721,12 @@ button {
     }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .subscribe-input {
+        width: 320px;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     .footer-form {
         flex-direction: row;
@@ -736,7 +742,6 @@ button {
 }
 
 .subscribe-input {
-    min-width: 264px;
     height: 40px;
     background-color: var(--navy-blue);
     border: 1px solid var(--white);
@@ -745,7 +750,7 @@ button {
     font-size: 12px;
 
     padding: 16px 8px;
-    color: var(--white);
+    color: var(--white); 
 
 }
 
@@ -757,7 +762,7 @@ button {
 @media only screen and (min-width: 768px) {
     .subscribe-input {
         margin-right: 16px;
-        width: 100%;
+        min-width: 264px;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -795,6 +800,8 @@ button {
 
 .portfolio-section {
     padding: 48px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -868,6 +875,7 @@ button {
 
 .service-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
