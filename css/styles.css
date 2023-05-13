@@ -79,7 +79,7 @@ button {
     padding-left: 16px;
     padding-right: 16px;
     
-    /*outline: 2px solid red;
+   /* outline: 2px solid red;
     outline-offset: -2px;*/
 }
 
@@ -136,13 +136,10 @@ button {
 }
 
 /*end common features*/
-@media only screen and (max-width: 427px) {
-    .header-container {
-        
-    }
-}
+
 .header-container {
     display: flex;
+    flex-wrap: nowra;
     align-items: center;
     min-height: 70px;
 }
@@ -252,6 +249,7 @@ button {
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
     .header-contacts {
         margin-bottom: 12px;
+        
     }
 }
 
@@ -259,7 +257,7 @@ button {
     .contacts-list {
         display: flex;
         gap: 40px;
-        margin-right: 76px;
+        margin-left: 76px;
     }
 }
 
@@ -290,7 +288,6 @@ button {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--navy-blue);
-    /*max-width: 428px;*/
 }
 
 @media only screen and (min-width: 1158px) {
@@ -673,12 +670,6 @@ button {
     }
 }
 
-@media only screen and (min-width: 1159px) {
-    .footer-inner {
-        gap: 120px;
-    }
-}
-
 .logo-footer {
     display: inline-block;
     margin-right: 0;
@@ -697,7 +688,11 @@ button {
 
     margin-bottom: 16px;
 }
-
+@media only screen and (min-width: 1158px) {
+    .footer-right {
+        margin-left: 120px;
+    }
+}
 .socials-footer {
     gap: 16px;
 }
@@ -716,10 +711,7 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
-
 }
-
 
 @media only screen and (max-width: 767px) {
     .footer-subscribe {
@@ -730,18 +722,16 @@ button {
     }
 }
 
-
 @media only screen and (min-width: 768px) {
     .footer-form {
         flex-direction: row;
     }
 }
 
-
 @media only screen and (min-width: 1158px) {
     .footer-subscribe {
         justify-content: left;
-        margin-left: -40px;
+        margin-left: 80px;
     }
 }
 
@@ -761,16 +751,19 @@ button {
 
 @media only screen and (max-width: 767px) {
     .subscribe-input {
-        margin-bottom: 16px;
+        margin-bottom: 16px; 
     }
 }
+
 @media only screen and (min-width: 768px) {
     .subscribe-input {
         margin-right: 16px;
+        
     }
 }
 @media only screen and (min-width: 1158px) {
     .subscribe-input {
+        min-width: 224px;
         margin-right: 24px;
     }
 }
@@ -781,7 +774,6 @@ button {
     align-items: center;
     padding: 8px 24px;
     gap: 16px;
-    width: 165px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -1150,11 +1142,17 @@ button {
     position: absolute;
     top: 4px;
     left: 3px;
-
     pointer-events: none;
     fill: none;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (max-width: 427px) {
+    .modal-form-agreement-icon {
+        top: 9px;
+        left: 1px;
+    }
 }
 
 .modal-form-agreement-box:checked {
