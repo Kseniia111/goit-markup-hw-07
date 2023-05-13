@@ -79,8 +79,8 @@ button {
     padding-left: 16px;
     padding-right: 16px;
     
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /*outline: 2px solid red;
+    outline-offset: -2px;*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -136,11 +136,17 @@ button {
 }
 
 /*end common features*/
-
+@media only screen and (max-width: 427px) {
+    .header-container {
+        
+    }
+}
 .header-container {
     display: flex;
     align-items: center;
+    min-height: 70px;
 }
+
 
 .header-shadow {
     border-bottom: 1px solid var(--cornflower);
@@ -167,8 +173,8 @@ button {
 }
 
 @media only screen and (min-width: 1158px) {
-    .header-logo {
-        margin-left: 140px;
+    .logo {
+        margin-right: 76px;
     }
 }
 
@@ -234,7 +240,6 @@ button {
 }
 
 .header-lists {
-
     display: flex;
     gap: 40px;
 }
@@ -242,6 +247,12 @@ button {
 .contacts {
     font-style: normal;
     margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .header-contacts {
+        margin-bottom: 12px;
+    }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -267,8 +278,8 @@ button {
         line-height: 1.5;
         letter-spacing: 0.02em;
     }
-}
 
+}
 /*hero*/
 .hero {
     background-repeat: no-repeat;
@@ -647,9 +658,7 @@ button {
 }
 @media only screen and (min-width: 768px) and (max-width: 1158px) {
     .footer-inner {
-        padding-left: 108px;
-        padding-right: 108px;
-       
+       width: 580px;
     }
 }
 
@@ -707,6 +716,7 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 
 }
 
@@ -736,7 +746,7 @@ button {
 }
 
 .subscribe-input {
-    width: 100%;
+    min-width: 264px;
     height: 40px;
     background-color: var(--navy-blue);
     border: 1px solid var(--white);
@@ -757,7 +767,6 @@ button {
 @media only screen and (min-width: 768px) {
     .subscribe-input {
         margin-right: 16px;
-        min-width: 264px;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -954,6 +963,7 @@ button {
     transition: opacity 250ms, visibility 250ms;
     background-color: rgba(46, 47, 66, 0.4);
 }
+
 @media screen and (orientation: landscape)  {
     .backdrop {
         overflow: auto;
@@ -963,7 +973,7 @@ button {
         transform: translate(-50%, 0%);
     }
 }
- 
+
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -984,6 +994,12 @@ button {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 427px) {
+    .modal {
+        width: 308px;
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -1221,7 +1237,10 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-icon {
+.modal-mob-icon {
+    position: absolute;
+    top: 6px;
+    left: 7px;
     justify-content: center;
     align-items: center;
 }
